@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Economic Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link type="text/css" rel="stylesheet" href="/static/main.css" />
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="box" style="margin-top: 35px;">
+        <h3>Possibility of a Recession</h3>
+        <p style="margin-bottom: 25px;">
+          Sources – <a target="_nyfed" href="https://www.newyorkfed.org/research/capital_markets/ycfaq#/interactive">New York Fed</a>,
+          <a href="https://au.finance.yahoo.com/" target="_yfi">Yahoo Finance</a>
+        </p>
+        <div style="width: 100%; float: left">
+          <div id="recession-probability-1"></div>
+          <input type="range" style="height: auto; width: 100%;" min="1" max="100" value="50" class="slider" id="recession-probability-1-slider">
+        </div>
+        <div style="clear: both;"></div>
+      </div>
+
+      <div class="box" style="margin-top: 35px;">
+        <h3>Real Retail / Food Service Sales (Forecast 1m)</h3>
+        <p style="margin-bottom: 25px;">
+          Sources – <a target="_fred" href="https://fred.stlouisfed.org/series/RRSFS">FRED</a>
+          <!-- <a href="https://au.finance.yahoo.com/" target="_yfi">Yahoo Finance</a> -->
+        </p>
+        <div style="width: 100%; float: left">
+          <div id="sforecast"></div>
+          <input type="range" style="height: auto; width: 100%;" min="1" max="100" value="50" class="slider" id="sforecast-slider">
+        </div>
+        <div style="clear: both;"></div>
+      </div>
+
+      <div class="box" style="margin-top: 35px;">
+        <h3>Supermarket Analysis</h3>
+        <p style="margin-bottom: 25px;">
+          Sources – <a target="_nyfed" href="https://alfred.stlouisfed.org/series?seid=MRTSSM44511USN&utm_source=series_page&utm_medium=related_content&utm_term=related_resources&utm_campaign=alfred">FRED</a
+        </p>
+        <div style="width: 100%; float: left">
+          <div id="supermarkets"></div>
+          <input type="range" style="height: auto; width: 100%;" min="1" max="100" value="50" class="slider" id="supermarkets-slider">
+        </div>
+        <div style="clear: both;"></div>
+      </div>
+
+      <div class="box" style="margin-top: 35px;">
+        <h3>Unemployment Rate vs. Industrial Production (PERC STACKED)</h3>
+        <p style="margin-bottom: 25px;">
+          Sources – <a target="_nyfed" href="https://fred.stlouisfed.org/series/UNRATE">FRED</a>
+          <!-- , -->
+          <!-- <a href="https://au.finance.yahoo.com/" target="_yfi">Yahoo Finance</a> -->
+        </p>
+        <div style="width: 100%; float: left">
+          <div id="unemployment"></div>
+          <input type="range" style="height: auto; width: 100%;" min="1" max="100" value="50" class="slider" id="unemployment-slider">
+        </div>
+        <div style="clear: both;"></div>
+      </div>
+
+      <!-- <div class="box" style="margin-top: 35px;">
+        <h3>VIX Derivision (Source - VIX)</h3>
+        <p style="margin-bottom: 25px;">
+          Sources – <a target="_nyfed" href="https://fred.stlouisfed.org/series/BAMLH0A0HYM2">ICE BofA US High Yield Index Option-Adjusted Spread</a>
+        </p>
+        <div style="width: 100%; float: left">
+          <div id="ospreads"></div>
+          <input type="range" style="height: auto; width: 100%;" min="1" max="100" value="50" class="slider" id="ospreads-slider">
+        </div>
+        <div style="clear: both;"></div>
+      </div> -->
+
+
+      <div class="box" style="margin-top: 35px;">
+        <h3>NAV Dislocation (ASX:NDQ)</h3>
+        <p style="margin-bottom: 25px;">
+          Sources –
+          <a target="_bshares" href="https://www.betashares.com.au/fund/nasdaq-100-etf/">BetaShares</a>,
+          <a href="https://au.finance.yahoo.com/" target="_yfi">Yahoo Finance</a>
+        </p>
+        <div style="width: 100%; float: left">
+          <div id="nav-dis"></div>
+          <input type="range" style="height: auto; width: 100%;" min="1" max="100" value="50" class="slider" id="nav-dis-slider">
+        </div>
+        <div style="clear: both;"></div>
+      </div>
+
+      <div class="box" style="margin-top: 35px;">
+        <h3>Gold Spot vs. NYSE-GOLD</h3>
+        <p style="margin-bottom: 25px;">
+          Sources –
+          <a target="_bshares" href="https://www.gold.org/goldhub/data/gold-prices/">Gold.org</a>,
+          <a href="https://au.finance.yahoo.com/" target="_yfi">Yahoo Finance</a>
+        </p>
+        <div style="width: 100%; float: left">
+          <div id="gold"></div>
+          <input type="range" style="height: auto; width: 100%;" min="1" max="100" value="50" class="slider" id="gold-slider">
+        </div>
+        <div style="clear: both;"></div>
+      </div>
+
+      <!-- <div class="box" style="margin-top: 35px;">
+        <h3>Bitcoin PPI vs. VIX</h3>
+        <p style="margin-bottom: 25px;">
+          Sources – <a target="_btc_ppi" href="http://bitcoinppi.com/">Bitcoin PPI</a>,
+          <a href="https://au.finance.yahoo.com/" target="_yfi">Yahoo Finance</a>
+        </p>
+        <div style="width: 100%; float: left">
+          <div id="bitcoin-ppi"></div>
+          <input type="range" style="height: auto; width: 100%;" min="1" max="100" value="50" class="slider" id="bitcoin-ppi-slider">
+        </div>
+        <div style="clear: both;"></div>
+      </div> -->
+
+    </div>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript" src="/static/chart-spawner.js"></script>
+  <script type="text/javascript" src="/static/chart-manager.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</html>

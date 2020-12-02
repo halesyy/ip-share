@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+<head>
+<meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:true}};(window.NREUM||(NREUM={})).loader_config={xpid:"VgYPU1dRChABXVZQBgcDUlY=",licenseKey:"532ac39be0",applicationID:"197216442"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(23),c={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,i.indexOf("dev")!==-1&&(c.dev=!0),i.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&o.on("internal-error",function(t){r(t.stack)}),c.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{p?p-=1:i(c||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:s.now();o("err",[t,n])}var o=t("handle"),a=t(24),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),s.xhrWrappable&&t(10),d=!0)}c.on("fn-start",function(t,e,n){d&&(p+=1)}),c.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),c.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),c.on("internal-error",function(t){o("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var i=t("ee"),o=t("handle"),a=t(9),c=t(8),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;i.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),i.on(w,function(t,e){var n=t[0];n instanceof x&&o("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),this.bstType])}),c.on(m,function(){this.bstStart=y.now()}),c.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),i.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),i.on(g+h,function(t){o("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){c.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),c=t("wrap-function")(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var c=r.apply(this,t);return i.emit(n+"start",[t,a],c),c.then(function(t){return i.emit(n+"end",[null,t],c),t},function(t){throw i.emit(n+"end",[t],c),t})})}var i=t("ee").get("fetch"),o=t(24),a=t(23);e.exports=i;var c=window,s="fetch-",f=s+"body-",u=["arrayBuffer","blob","json","text","formData"],d=c.Request,l=c.Response,p=c.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(c,"fetch",s),i.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(s+"done",[null,e],n)}else i.emit(s+"done",[t],n)}))},{}],7:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],9:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(s+u,r),o.on(c+u,i)},{}],10:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",c)}function o(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(v,i,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,e,n){function r(t){if(!c(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),w=Date.now(),v={spanId:h,traceId:m,timestamp:w};return(t.sameOrigin||s(t)&&l())&&(v.traceContextParentHeader=i(h,m),v.traceContextStateHeader=o(h,w,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&s(t)&&d())&&(v.newrelicHeader=a(h,m,w,n,r,f)),v}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",c=1,s="",f="";return i+"@nr="+o+"-"+c+"-"+n+"-"+r+"-"+t+"-"+a+"-"+s+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var c={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(c.d.tk=o),btoa(JSON.stringify(c))}function c(t){return f()&&s(t)}function s(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(20),h=t(13);e.exports={generateTracePayload:r,shouldGenerateTrace:c}},{}],12:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=s(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function o(t,e){t.params.status=e.status;var n=w(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){o(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<l;c++)e.addEventListener(d[c],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof v&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url&&(n=t[0].url),n&&(this.parsedOrigin=s(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)})}},{}],13:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,c=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||c),"/"===i.pathname&&(r[t]=i),i}},{}],14:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(16);e.exports=r},{}],15:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(23),c=t(24),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){u[e]=i(l+e,!0,"api")}),u.addPageAction=i(l+"addPageAction",!0),u.setCurrentRouteName=i(l+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(p+"tracer",[f.now(),t,n],r),function(){if(s.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=i(p+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,f.now(),!1,e])}},{}],16:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],17:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],18:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(25);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],19:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!w){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),w=!0,d("timing",["fi",e,n])}}function c(t){d("pageHide",[l.now(),t])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var s,f,u,d=t("handle"),l=t("loader"),p=t(22),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(i);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(o);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var w=!1,v=["click","keydown","mousedown","pointerdown","touchstart"];v.forEach(function(t){document.addEventListener(t,a,!1)})}p(c)}},{}],20:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",c=0;c<o.length;c++)i=o[c],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(31)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],21:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,s=c.match(a);s&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=s[1])}e.exports={agent:i,version:o,match:r}},{}],22:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],23:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],24:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],25:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?s(t,c,o):o()}function n(n,r,i,o){if(!l.aborted||o){t&&t(n,r,i);for(var a=e(i),c=m(n),s=c.length,f=0;f<s;f++)c[f].apply(a,r);var d=u[y[n]];return d&&d.push([x,n,r,a]),a}}function p(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function w(t){return d[t]=d[t]||i(n)}function v(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var g={},y={},x={on:p,addEventListener:p,removeEventListener:h,emit:n,get:w,listeners:m,context:e,buffer:v,abort:a,aborted:!1};return x}function o(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var c="nr@context",s=t("gos"),f=t(23),u={},d={},l=e.exports=i();l.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!b++){var t=x.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(g,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+x.offset],null,"api"),c("timing",["load",n]);var r=l.createElement("script");r.src="https://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+x.offset],null,"api")}var a=t(18),c=t("handle"),s=t(23),f=t("ee"),u=t(21),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},y=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),x=e.exports={offset:a.getLastTimestamp(),now:a,origin:v,features:{},xhrWrappable:y,userAgent:u};t(15),t(19),l[p]?(l[p]("DOMContentLoaded",o,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",i),d[h]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var b=0},{}],"wrap-function":[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var i=t("ee"),o=t(24),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,i){function nrWrapper(){var r,a,c,s;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){l([f,"",[r,a,i],c])}u(e+"start",[r,a,i],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,i,o){i||(i="");var a,c,s,f="-"===i.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+i:i,o,c))}function u(n,r,i){if(!s||e){var o=s;s=!0;try{t.emit(n,r,i,e)}catch(a){l([a,n,r,i])}s=o}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){l([r])}for(var i in t)c.call(t,i)&&(e[i]=t[i]);return e}function l(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=i),n.inPlace=f,n.flag=a,n}},{}]},{},["loader",2,12,4,3]);</script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","/sites/default/files/google_analytics/analytics.js?qikdbe","ga");ga("create", "UA-299455-1", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("set", "page", "/403.html?page=" + document.location.pathname + document.location.search + "&from=" + document.referrer);ga("send", "pageview");</script>
+<link rel="shortlink" href="https://www.gold.org/" />
+<meta property="og:site_name" content="World Gold Council" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="canonical" href="https://www.gold.org/" />
+<meta name="twitter:title" content="Access denied" />
+<meta name="twitter:site" content="@goldcouncil" />
+<meta name="twitter:site:id" content="39871442" />
+<meta property="og:url" content="https://www.gold.org/download/file/8369/Prices.xlsx" />
+<meta name="twitter:creator" content="@goldcouncil" />
+<meta name="twitter:creator:id" content="39871442" />
+<meta property="og:title" content="Access denied" />
+<meta name="twitter:url" content="https://www.gold.org/download/file/8369/Prices.xlsx" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<script>
+//Pardot tracking code
+
+piAId = '825153';
+piCId = '17214';
+piHostname = 'pi.pardot.com';
+
+(function() {
+  function async_load(){
+    var s = document.createElement('script'); s.type = 'text/javascript';
+    s.src = '/sites/default/files/pardot/pd.js?qikdbe';
+    var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+  }
+  if(window.attachEvent) { window.attachEvent('onload', async_load); }
+  else { window.addEventListener('load', async_load, false); }
+})();
+
+</script>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=1" />
+<link rel="mask-icon" color="#a39161" href="/safari-pinned-tab.svg?v=1" />
+<meta name="apple-mobile-web-app-title" content="World Gold Council" />
+<meta name="application-name" content="World Gold Council" />
+<meta name="msapplication-TileColor" content="#000000" />
+<meta name="theme-color" content="#000000" />
+<link rel="shortcut icon" href="/themes/custom/wgc_v01/favicon.ico" type="image/vnd.microsoft.icon" />
+<title>Access denied | World Gold Council</title>
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KHC2KGT');</script>
+
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_sHx_lVbn2r1NCq8KSNVoHH3WKLyY5U_fxRyoleKCAzw.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_KcJoq0FHGsYAGg6ypPntc-tGf7ZFa8aapzcB7LSyoI4.css" />
+<link rel="stylesheet" media="print" href="/sites/default/files/css/css_4J0JOEkWvFKue7JvU2e5Q_WVCK9Pm-VIeclUzGVhIdI.css" />
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+<script>
+/**
+* Global object to push charts onto
+*/
+var _fs_charts = _fs_charts || [];
+var gdt_files = gdt_files || [];
+var gdt_charts = gdt_charts || [];
+
+
+</script>
+</head>
+<body class="role-anonymous wgc-theme-wgc path-download-file-8369-Pricesxlsx wgc-user-checking">
+<a href="#main-content" class="visually-hidden focusable">
+Skip to main content
+</a>
+<div id="ieMsg" class="ie-only browser-warning" style="display:none">
+<p>The browser you are using is out of date. It has disadvantages and a limited feature set. You will not see all the features of this website. <a href="https://browser-update.org/update.html" target="_blank">Learn how to update your browser</a>.</p>
+</div>
+<div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+<div class="container-fluid header">
+<header role="banner">
+<p class="site-logo">
+<a href="/" title="World Gold Council - Gold Price &amp; Gold Market News" rel="home" id="logo">
+<img src="/themes/custom/wgc_v01/logo.svg" alt="World Gold Council - Gold Price &amp; Gold Market News">
+</a>
+</p>
+<div class="region region-global">
+<nav id="block-wgcheaderuseraccountlinks" class="block block-wgc-blocks block-wgc-desktop-user-account-header-block">
+<ul class="nav nav-pills">
+<li class="nav-item checking"><span><em>Checking your details</em><svg class="svgspin" xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 16 16"><path d="m8 0c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8m4.88 9.21c-.57 2.23-2.58 3.79-4.88 3.79s-4.31-1.56-4.88-3.79c-.1-.38.13-.76.51-.86.06-.02.12-.02.18-.02.32 0 .6.22.68.53.41 1.61 1.86 2.73 3.52 2.73s3.1-1.12 3.52-2.73c.08-.31.36-.53.68-.53.06 0 .12.001.18.02.18.05.34.16.43.33s.12.35.07.54"></path></svg></span></li>
+<li class="nav-item warning"><span>Apologies, there has been an error, please <a href="/login">login here</a></span></li>
+<li class="nav-item login"><a class="nav-link" href="/login">Login</a></li>
+<li class="nav-item register"><a class="nav-link" href="/register">Register</a></li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle greeting" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Hello</a>
+<div class="dropdown-menu">
+<a class="dropdown-item edit" href="/profile">View your profile</a>
+<div class="dropdown-divider"></div>
+<a class="dropdown-item logout" href="#logout">Logout</a>
+</div>
+</li>
+</ul>
+</nav>
+<div class="language-switcher-language-url block block-language block-language-blocklanguage-interface" id="block-languageswitcher" role="navigation">
+<ul class="links"><li hreflang="en" data-drupal-link-system-path="system/403" class="en"><a href="/system/403" class="language-link" hreflang="en" data-drupal-link-system-path="system/403">English</a></li><li hreflang="zh-hans" data-drupal-link-system-path="system/403" class="zh-hans"><a href="/cn/system/403" class="language-link" hreflang="zh-hans" data-drupal-link-system-path="system/403">Chinese, Simplified</a></li></ul>
+</div>
+<button class="hamburger hamburger--collapse" type="button">
+<span class="hamburger-box">
+<span class="hamburger-inner"></span>
+</span>
+</button>
+</div>
+<div id="overlayMobile">
+<div class="region region-navigation">
+<div id="block-wgcsocialfollows" class="block block-wgc-blocks block-wgc-social-follows-block">
+<div class="follows">
+<p>Follow us:</p>
+<ul class="social-icons">
+<li class="li-twitter"><a href="https://twitter.com/goldcouncil" class="twitter purple" target="_blank"><strong>Twitter</strong></a></li>
+<li class="li-facebook"><a href="https://www.facebook.com/worldgoldcouncil" class="facebook purple" target="_blank"><strong>Facebook</strong></a></li>
+<li class="li-linkedin"><a href="https://www.linkedin.com/company/world-gold-council/" class="linkedin purple" target="_blank"><strong>LinkedIn</strong></a></li>
+<li class="li-wechat"><a href="/themes/custom/wgc_v01/img/social/wgc-wechat-qr.png" class="wechat purple"><strong>WeChat</strong></a></li>
+<li class="li-weibo"><a href="https://www.weibo.com/worldgoldcouncil?topnav=1&amp;wvr=6&amp;topsug=1" class="weibo purple" target="_blank"><strong>Weibo</strong></a></li>
+</ul>
+</div>
+</div>
+<div id="block-wgcheadergoldspotprice" class="block block-wgc-blocks block-wgc-header-gold-spot-price-block">
+<h2>
+<a href="/goldhub/data/price-and-performance" class="toggle text title">Gold spot price</a>
+<a href="#spotprice" class="toggle text currency">USD</a>
+<span class="text value">AWAITED</span>
+<span class="variation loading" role="presentation">
+</span>
+<span class="time-indicator" role="presentation" data-toggle="tooltip" data-placement="right" data-html="true" title="<span style='text-align:left;display:block'>Last updated:<br />n/a</span>">
+<span class="timestamp"></span></span>
+</h2>
+<div class="data-panel">
+<div class="row">
+<div class="col-3 table-spotprice-wrapper">
+<p>Last updated: <span class="spotprice-update-time">n/a</span></p>
+<p>Click on a currency below to select it.</p>
+<table class="table table-sm table-hover table-striped table-spotprice">
+<caption>The gold prices used in this table and chart are supplied by FastMarkets. Where the gold price is presented in currencies other than the US dollar, it is converted into the local currency unit using the foreign exchange rate at the time (or as close to as possible).</caption>
+<thead>
+<tr>
+<th scope="col">Currency</th>
+<th scope="col">Mid price</th>
+</tr>
+</thead>
+<tbody>
+<tr data-currency="USD" data-symbol="US$">
+<th scope="row">USD</th>
+<td class="mid" data-performance="1">AWAITED</td>
+</tr>
+<tr data-currency="GBP" data-symbol="UK£">
+<th scope="row">GBP</th>
+<td class="mid" data-performance="1">AWAITED</td>
+</tr>
+<tr data-currency="AUD" data-symbol="A$">
+<th scope="row">AUD</th>
+<td class="mid" data-performance="1">AWAITED</td>
+</tr>
+<tr data-currency="CAD" data-symbol="C$">
+<th scope="row">CAD</th>
+<td class="mid" data-performance="1">AWAITED</td>
+</tr>
+<tr data-currency="CHF" data-symbol="CHF">
+<th scope="row">CHF</th>
+<td class="mid" data-performance="1">AWAITED</td>
+</tr>
+<tr data-currency="EUR" data-symbol="€">
+<th scope="row">EUR</th>
+<td class="mid" data-performance="1">AWAITED</td>
+</tr>
+<tr data-currency="JPY" data-symbol="¥">
+<th scope="row">JPY</th>
+<td class="mid" data-performance="1">AWAITED</td>
+</tr>
+<tr data-currency="ZAR" data-symbol="ZAR">
+<th scope="row">ZAR</th>
+<td class="mid" data-performance="1">AWAITED</td>
+</tr>
+<tr data-currency="INR" data-symbol="INR">
+<th scope="row">INR</th>
+<td class="mid" data-performance="1">AWAITED</td>
+</tr>
+<tr data-currency="CNY" data-symbol="CNY">
+<th scope="row">CNY</th>
+<td class="mid" data-performance="1">AWAITED</td>
+</tr>
+<tr data-currency="HKD" data-symbol="HK$">
+<th scope="row">HKD</th>
+<td class="mid" data-performance="1">AWAITED</td>
+</tr>
+</tbody>
+</table>
+<a href="/goldhub/data/price-and-performance" class="btn btn-block btn-purple">Price and performance data</a>
+</div>
+<div class="col-9">
+<h2>Mid price: <span class="selected-currency">USD</span>/Oz</h2>
+<div class="spot-price-chart">
+</div>
+</div>
+<div class="links col-3">
+<a href="/goldhub/data/price-and-performance" class="btn btn-block btn-gold">Price and performance data</a></div>
+<div class="caption col-9"><p>The gold prices used in this table and chart are supplied by FastMarkets. Where the gold price is presented in currencies other than the US dollar, it is converted into the local currency unit using the foreign exchange rate at the time (or as close to as possible).</p></div>
+</div>
+</div>
+</div>
+<div class="greeting-area">
+<div class="bar d-flex flex-row justify-content-between">
+<p class="greeting"></p>
+<a class="btn btn-sm logout" href="/logout">Logout</a>
+</div>
+</div>
+<div id="block-wgcmobilenavigationtabs" class="block block-wgc-blocks block-wgc-mobile-navigation-tabs-block">
+<ul class="nav nav-tabs">
+<li class="nav-item tab-navigation" data-wgc-mobile-sub="navigation">
+<a class="nav-link active" href="#">Menu</a>
+</li>
+<li class="nav-item tab-search" data-wgc-mobile-sub="search">
+<a class="nav-link" href="#">Search</a>
+</li>
+<li class="nav-item tab-login-register" data-wgc-mobile-sub="login-register">
+<a class="nav-link" href="#">Login / Register</a>
+</li>
+<li class="nav-item tab-profile" data-wgc-mobile-sub="profile">
+<a class="nav-link" href="/profile">Your profile</a>
+</li>
+<li class="nav-item tab-checking">
+<span class="nav-link">Checking...<svg class="svgspin" xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 16 16"><path d="m8 0c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8m4.88 9.21c-.57 2.23-2.58 3.79-4.88 3.79s-4.31-1.56-4.88-3.79c-.1-.38.13-.76.51-.86.06-.02.12-.02.18-.02.32 0 .6.22.68.53.41 1.61 1.86 2.73 3.52 2.73s3.1-1.12 3.52-2.73c.08-.31.36-.53.68-.53.06 0 .12.001.18.02.18.05.34.16.43.33s.12.35.07.54"></path></svg></span>
+</li>
+</ul>
+</div>
+<div class="search-content-area"></div><nav role="navigation" aria-labelledby="block-mainnavigation-3-menu" id="block-mainnavigation-3" class="block block-menu navigation menu--main">
+<h2 class="visually-hidden" id="block-mainnavigation-3-menu">Main navigation</h2>
+<ul class="menu">
+<li class="menu-item">
+<a href="/" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+</li>
+<li class="menu-item has-children menu-item--expanded">
+<a href="/who-we-are" data-drupal-link-system-path="node/9515">Who we are</a>
+<span class="sub-toggle"></span>
+<ul class="menu">
+<li class="menu-item has-children menu-item--expanded">
+<a href="/who-we-are/our-leadership" title="Our leadership" data-drupal-link-system-path="node/12517">Our leadership</a>
+<span class="sub-toggle"></span>
+<ul class="menu">
+<li class="menu-item">
+<a href="/who-we-are/our-leadership/our-chairs" title="Our Chairs" data-drupal-link-system-path="node/9353">Our Chairs</a>
+</li>
+<li class="menu-item">
+<a href="/who-we-are/our-leadership/our-ceos" title="Our CEOs" data-drupal-link-system-path="node/13695">Our CEOs</a>
+</li>
+</ul>
+</li>
+<li class="menu-item">
+<a href="/who-we-are/our-members" title="World Gold Council Members" data-drupal-link-system-path="node/10185">Our members</a>
+</li>
+<li class="menu-item">
+<a href="/who-we-are/governance" data-drupal-link-system-path="node/9247">Governance</a>
+</li>
+<li class="menu-item">
+<a href="/who-we-are/our-offices" data-drupal-link-system-path="node/10186">Our offices</a>
+</li>
+</ul>
+</li>
+<li class="menu-item has-children menu-item--expanded">
+<a href="/what-we-do" data-drupal-link-system-path="node/9516">What we do</a>
+<span class="sub-toggle"></span>
+<ul class="menu">
+<li class="menu-item has-children menu-item--expanded">
+<a href="/what-we-do/gold-investment" data-drupal-link-system-path="node/9258">Investing in gold</a>
+<span class="sub-toggle"></span>
+<ul class="menu">
+<li class="menu-item has-children menu-item--expanded">
+<a href="/what-we-do/investing-gold/why-invest-gold" data-drupal-link-system-path="node/9259">Why invest in gold?</a>
+<span class="sub-toggle"></span>
+<ul class="menu">
+<li class="menu-item">
+<a href="/what-we-do/investing-gold/why-invest-gold/mainstream-investing-in-gold" title="Going mainstream" data-drupal-link-system-path="node/12522">Going mainstream</a>
+</li>
+<li class="menu-item">
+<a href="/what-we-do/gold-investment/why-invest-in-gold/gold-as-an-investment" title="A source of return" data-drupal-link-system-path="node/12580">A source of return</a>
+</li>
+<li class="menu-item">
+<a href="/what-we-do/investing-gold/why-invest-gold/gold-allocation-and-diversification" title="The right kind of diversification" data-drupal-link-system-path="node/12629">The right kind of diversification</a>
+</li>
+</ul>
+</li>
+<li class="menu-item has-children menu-item--expanded">
+<a href="/what-we-do/gold-investment/how-buy-gold" data-drupal-link-system-path="node/9281">How to buy gold</a>
+<span class="sub-toggle"></span>
+<ul class="menu">
+<li class="menu-item">
+<a href="/what-we-do/gold-investment/how-buy-gold/retail-gold-investment-principles" title="Retail Gold Investment Principles" data-drupal-link-system-path="node/14692">Retail Gold Investment Principles</a>
+</li>
+<li class="menu-item">
+<a href="/what-we-do/investing-gold/how-buy-gold/bars-and-coins" title="Bars and coins" data-drupal-link-system-path="node/9437">Bars and coins</a>
+</li>
+<li class="menu-item">
+<a href="/what-we-do/investing-gold/how-buy-gold/gold-backed-etfs-and-similar" title="Gold-backed ETFs and similar" data-drupal-link-system-path="node/9438">Gold-backed ETFs and similar</a>
+</li>
+<li class="menu-item">
+<a href="/what-we-do/investing-gold/how-buy-gold/allocated-accounts" title="Allocated accounts" data-drupal-link-system-path="node/9439">Allocated accounts</a>
+</li>
+<li class="menu-item">
+<a href="/what-we-do/investing-gold/how-buy-gold/internet-gold" title="Internet Investment Gold" data-drupal-link-system-path="node/13518">Internet Investment Gold</a>
+</li>
+<li class="menu-item">
+<a href="/what-we-do/investing-gold/how-buy-gold/gold-derivatives-futures-forwards-and-options" title="Gold derivatives: futures, forwards and options" data-drupal-link-system-path="node/9440">Gold derivatives: futures, forwards and options</a>
+</li>
+<li class="menu-item">
+<a href="/what-we-do/investing-gold/how-buy-gold/gold-mining-stocks" title="Gold mining stocks" data-drupal-link-system-path="node/9441">Gold mining stocks</a>
+</li>
+</ul>
+</li>
+<li class="menu-item">
+<a href="/what-we-do/investing-gold/golds-drivers-and-price-performance" title="Drivers of gold price performance" data-drupal-link-system-path="node/12630">Drivers of gold price performance</a>
+</li>
+</ul>
+</li>
+<li class="menu-item has-children menu-item--expanded">
+<a href="/what-we-do/official-institutions" data-drupal-link-system-path="node/9269">Official institutions</a>
+<span class="sub-toggle"></span>
+<ul class="menu">
+<li class="menu-item">
+<a href="/what-we-do/official-institutions/case-gold" data-drupal-link-system-path="node/9388">The case for gold</a>
+</li>
+<li class="menu-item">
+<a href="/goldhub/data/monthly-central-bank-statistics" data-drupal-link-system-path="node/7150">Official holdings</a>
+</li>
+<li class="menu-item has-children menu-item--expanded">
+<a href="/what-we-do/official-institutions/central-bank-gold-agreements" data-drupal-link-system-path="node/9275">Central Bank Gold Agreements</a>
+<span class="sub-toggle"></span>
+<ul class="menu">
+<li class="menu-item">
+<a href="/what-we-do/official-institutions/central-bank-gold-agreements/historic-gold-agreements" data-drupal-link-system-path="node/9277">Historic gold agreements</a>
+</li>
+</ul>
+</li>
+<li class="menu-item">
+<a href="/what-we-do/official-institutions/accounting-monetary-gold" data-drupal-link-system-path="node/9272">Accounting for monetary gold</a>
+</li>
+<li class="menu-item">
+<a href="/what-we-do/official-institutions/gold-reserves-in-practice" title="Gold in practice" data-drupal-link-system-path="node/9284">Gold in practice</a>
+</li>
+<li class="menu-item">
+<a href="/what-we-do/official-institutions/training-and-engagement" data-drupal-link-system-path="node/9282">Training and engagement</a>
+</li>
+</ul>
+</li>
+<li class="menu-item has-children menu-item--expanded">
+<a href="/what-we-do/gold-market-structure" title="Market infrastructure" data-drupal-link-system-path="node/13113">Market infrastructure</a>
+<span class="sub-toggle"></span>
+<ul class="menu">
+<li class="menu-item">
+<a href="/what-we-do/gold-market-structure/gold-trading-exchange-vs-otc" title="Gold Trading: OTC vs. exchange" data-drupal-link-system-path="node/13114">Gold Trading: OTC vs. exchange</a>
+</li>
+<li class="menu-item">
+<a href="/what-we-do/gold-market-structure/global-gold-market" title="Major global trading hubs" data-drupal-link-system-path="node/13115">Major global trading hubs</a>
+</li>
+<li class="menu-item">
+<a href="/what-we-do/gold-market-structure/market-structure-trends" data-drupal-link-system-path="node/9391">Market structure trends</a>
+</li>
+<li class="menu-item">
+<a href="/what-we-do/gold-market-structure/spot-exchange-india" title="Indian Spot Exchange" data-drupal-link-system-path="node/14146">Indian Spot Exchange</a>
+</li>
+</ul>
+</li>
+<li class="menu-item">
+<a href="/what-we-do/our-history" title="Our history" data-drupal-link-system-path="node/13116">Our history</a>
+</li>
+</ul>
+</li>
+<li class="menu-item has-children menu-item--expanded">
+<a href="/about-gold" data-drupal-link-system-path="node/9514">About gold</a>
+<span class="sub-toggle"></span>
+<ul class="menu">
+<li class="menu-item has-children menu-item--expanded">
+<a href="/about-gold/gold-demand" data-drupal-link-system-path="node/9368">Gold demand</a>
+<span class="sub-toggle"></span>
+<ul class="menu">
+<li class="menu-item has-children menu-item--expanded">
+<a href="/about-gold/gold-demand/sectors-of-demand" data-drupal-link-system-path="node/9375">Sectors of demand</a>
+<span class="sub-toggle"></span>
+<ul class="menu">
+<li class="menu-item">
+<a href="/about-gold/gold-demand/sectors-of-demand/uses-of-gold" title="New uses for gold" data-drupal-link-system-path="node/13117">New uses for gold</a>
+</li>
+</ul>
+</li>
+<li class="menu-item">
+<a href="/about-gold/gold-demand/geographical-diversity" data-drupal-link-system-path="node/9418">Geographical diversity</a>
+</li>
+</ul>
+</li>
+<li class="menu-item has-children menu-item--expanded">
+<a href="/about-gold/gold-supply" title="Gold supply" data-drupal-link-system-path="node/13253">Gold supply</a>
+<span class="sub-toggle"></span>
+<ul class="menu">
+<li class="menu-item has-children menu-item--expanded">
+<a href="/about-gold/gold-supply/gold-mining" data-drupal-link-system-path="node/9354">Mine production</a>
+<span class="sub-toggle"></span>
+<ul class="menu">
+<li class="menu-item">
+<a href="/about-gold/gold-supply/gold-mining/how-much-gold" data-drupal-link-system-path="node/9361">How much gold</a>
+</li>
+<li class="menu-item">
+<a href="/goldhub/data/historical-mine-production" data-drupal-link-system-path="node/7323">Interactive gold mining map</a>
+</li>
+<li class="menu-item">
+<a href="/about-gold/gold-supply/gold-refining" title="Processing, smelting and refining gold" data-drupal-link-system-path="node/13255">Processing, smelting and refining gold</a>
+</li>
+</ul>
+</li>
+<li class="menu-item">
+<a href="/about-gold/gold-supply/how-gold-is-mined" data-drupal-link-system-path="node/9355">The lifecycle of a gold mine</a>
+</li>
+<li class="menu-item has-children menu-item--expanded">
+<a href="/about-gold/gold-supply/responsible-gold" title="Responsible gold" data-drupal-link-system-path="node/12520">Responsible gold</a>
+<span class="sub-toggle"></span>
+<ul class="menu">
+<li class="menu-item">
+<a href="/about-gold/gold-supply/responsible-gold/gold-minings-contributions-sdgs" title="Gold mining’s contributions to the SDGs" data-drupal-link-system-path="node/15252">Gold mining’s contributions to the SDGs</a>
+</li>
+<li class="menu-item">
+<a href="/about-gold/gold-supply/responsible-gold/blog" data-drupal-link-system-path="about-gold/gold-supply/responsible-gold/blog">Responsible gold blog</a>
+</li>
+<li class="menu-item">
+<a href="/about-gold/gold-supply/responsible-gold/responsible-gold-mining-principles" title="Responsible Gold Mining Principles" data-drupal-link-system-path="node/9469">Responsible Gold Mining Principles</a>
+</li>
+<li class="menu-item">
+<a href="/about-gold/gold-supply/responsible-gold/gold-and-climate-change" title="Gold and climate change" data-drupal-link-system-path="node/14678">Gold and climate change</a>
+</li>
+<li class="menu-item">
+<a href="/about-gold/gold-supply/responsible-gold/transparency" data-drupal-link-system-path="node/9249">Transparency</a>
+</li>
+<li class="menu-item">
+<a href="/about-gold/gold-supply/responsible-gold/all-in-costs" title="All-in sustaining costs and all-in costs" data-drupal-link-system-path="node/13491">All-in sustaining costs and all-in costs</a>
+</li>
+<li class="menu-item">
+<a href="/about-gold/gold-supply/responsible-gold/artisanal-and-small-scale-gold-mining" data-drupal-link-system-path="node/9351">Artisanal and small-scale gold mining</a>
+</li>
+<li class="menu-item">
+<a href="/about-gold/gold-supply/responsible-gold/conflict-free-gold-standard" title="Conflict-free" data-drupal-link-system-path="node/12521">Conflict-free</a>
+</li>
+</ul>
+</li>
+<li class="menu-item has-children menu-item--expanded">
+<a href="/about-gold/gold-supply/gold-development" data-drupal-link-system-path="node/9381">Gold for development</a>
+<span class="sub-toggle"></span>
+<ul class="menu">
+<li class="menu-item">
+<a href="/about-gold/gold-supply/gold-development/positive-impacts-mining-case-studies" data-drupal-link-system-path="node/9420">Positive impacts of mining - case studies</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="menu-item">
+<a href="/about-gold/market-structure-and-flows" data-drupal-link-system-path="node/13994">Market structure &amp; flows</a>
+</li>
+<li class="menu-item">
+<a href="/about-gold/gold-tax-and-regulation" title="Regulation and taxation" data-drupal-link-system-path="node/13256">Regulations and taxation</a>
+</li>
+<li class="menu-item has-children menu-item--expanded">
+<a href="/about-gold/history-gold" data-drupal-link-system-path="node/9372">History of gold</a>
+<span class="sub-toggle"></span>
+<ul class="menu">
+<li class="menu-item">
+<a href="/about-gold/history-gold/golds-role-money" data-drupal-link-system-path="node/9274">Gold&#039;s role as money</a>
+</li>
+<li class="menu-item">
+<a href="/about-gold/history-of-gold/bretton-woods-system" title="The Bretton Woods system" data-drupal-link-system-path="node/13258">The Bretton Woods system</a>
+</li>
+<li class="menu-item">
+<a href="/about-gold/history-of-gold/the-gold-standard" title="The classical gold standard" data-drupal-link-system-path="node/13259">The Classical Gold Standard</a>
+</li>
+</ul>
+</li>
+<li class="menu-item has-children menu-item--expanded">
+<a href="/about-gold/gold-facts" data-drupal-link-system-path="node/9283">Gold facts</a>
+<span class="sub-toggle"></span>
+<ul class="menu">
+<li class="menu-item">
+<a href="/about-gold/gold-facts/unique-properties-gold" data-drupal-link-system-path="node/9419">Unique properties of gold</a>
+</li>
+</ul>
+</li>
+<li class="menu-item has-children menu-item--expanded">
+<a href="/about-gold/about-gold-jewellery" data-drupal-link-system-path="node/13260">About gold jewellery</a>
+<span class="sub-toggle"></span>
+<ul class="menu">
+<li class="menu-item">
+<a href="/about-gold/about-gold-jewellery/gold-hallmarks" data-drupal-link-system-path="node/9254">Gold hallmarks</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="menu-item">
+<a href="/goldhub" data-drupal-link-system-path="node/5019">Data</a>
+</li>
+<li class="menu-item">
+<a href="/goldhub/research/library" data-drupal-link-system-path="goldhub/research/library">Research</a>
+</li>
+<li class="menu-item has-children menu-item--expanded">
+<a href="/news-and-events" title="News and events" data-drupal-link-system-path="node/7585">News and events</a>
+<span class="sub-toggle"></span>
+<ul class="menu">
+<li class="menu-item">
+<a href="/news-and-events/press-releases" data-drupal-link-system-path="news-and-events/press-releases">Press releases</a>
+</li>
+<li class="menu-item">
+<a href="/news-and-events/events" data-drupal-link-system-path="news-and-events/events">Events</a>
+</li>
+<li class="menu-item">
+<a href="/news-and-events/press-and-media-contacts" data-drupal-link-system-path="node/10187">Press and media contacts</a>
+</li>
+</ul>
+</li>
+</ul>
+<div class="d-flex follows-align">
+<div class="follows ml-auto">
+<p>Follow us:</p>
+<ul class="social-icons">
+<li class="li-twitter"><a href="https://twitter.com/goldcouncil" class="twitter purple" target="_blank"><strong>Twitter</strong></a></li>
+<li class="li-facebook"><a href="https://www.facebook.com/worldgoldcouncil" class="facebook purple" target="_blank"><strong>Facebook</strong></a></li>
+<li class="li-linkedin"><a href="https://www.linkedin.com/company/world-gold-council/" class="linkedin purple" target="_blank"><strong>LinkedIn</strong></a></li>
+<li class="li-wechat"><a href="/themes/custom/wgc_v01/img/social/wgc-wechat-qr.png" class="wechat purple"><strong>WeChat</strong></a></li>
+<li class="li-weibo"><a href="https://www.weibo.com/worldgoldcouncil?topnav=1&amp;wvr=6&amp;topsug=1" class="weibo purple" target="_blank"><strong>Weibo</strong></a></li>
+</ul>
+</div>
+</nav>
+<div id="block-wgcgoldorgloginregisterformblock" class="block block-wgc-user block-wgc-user-login-register-form-block">
+<section class="block block-">
+<div class="login-register-tabs">
+<ul class="nav nav-tabs">
+<li class="nav-item"><a class="nav-link login" data-wgc-user-tab="login">Login</a></li>
+<li class="nav-item"><a class="nav-link register" data-wgc-user-tab="register">Register</a></li>
+<li class="nav-item"><a class="nav-link forgot" data-wgc-user-tab="forgot">Forgot password</a></li>
+</ul>
+</div>
+<aside class="block row no-gutters block-wgc-blocks block-wgc-login-form-block">
+</aside>
+<aside class="block row no-gutters block-wgc-blocks block-wgc-register-form-block">
+</aside>
+<aside class="block block-wgc-blocks block-wgc-forgot-form-block">
+</aside>
+<aside class="block row no-gutters block-wgc-blocks block-wgc-profile-form-block">
+<div class="col-12">
+<p>&nbsp;</p>
+<p><a href="/profile" class="btn btn-block btn-green">Your profile</a></p>
+<p>&nbsp;</p>
+<p><a href="/logout" class="btn btn-block btn-purple">Logout</a></p>
+<p>&nbsp;</p>
+</div>
+</aside>
+</section>
+</div>
+</div>
+<div class="region region-header">
+<div id="block-wgcalgoliasearchblock" class="block block-wgc-algolia-block block-wgc-algolia-search-block">
+
+<div class="algolia-search-btn-container">
+<button class="btn btn-algolia-search loading">Search</button>
+</div>
+
+<div class="visually-hidden wgc-search-panel">
+<div class="wrapper wgc-search-wrapper">
+<h2>Search gold.org</h2>
+<div id="algolia-search">
+<div class="container-fluid">
+<div class="row no-gutters algolia-search-container">
+<div class="col-12 searchbox" id="searchbox"></div>
+<div class="col-12" id="current-refinements"></div>
+<div class="col-12 col-sm-7 col-md-6 refinements-list">
+<button class="refinement-button btn btn-sm" data-list="#keyword-list" id="keyword-button"><span class="label">Keywords</span><span class="count"></span></button>
+<button class="refinement-button btn btn-sm" data-list="#media-list" id="media-button"><span class="label">Type</span><span class="count"></span></button>
+</div>
+<div class="col-12 col-sm-5 col-md-6" id="ordering"><p>Sort by:</p><div id="sort-by"></div></div>
+<div class="col-12" id="facet-list">
+<div class="widget-list" id="keyword-list"></div>
+<div class="widget-list" id="media-list"></div>
+</div>
+<div class="col-12" id="hits"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav role="navigation" aria-labelledby="block-mainnavigation-menu" id="block-mainnavigation" class="block block-menu navigation menu--main">
+<h2 class="visually-hidden" id="block-mainnavigation-menu">Main navigation</h2>
+<ul class="menu">
+<li class="menu-item">
+<a href="/" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+</li>
+<li class="menu-item menu-item--collapsed">
+<a href="/who-we-are" data-drupal-link-system-path="node/9515">Who we are</a>
+</li>
+<li class="menu-item menu-item--collapsed">
+<a href="/what-we-do" data-drupal-link-system-path="node/9516">What we do</a>
+</li>
+<li class="menu-item menu-item--collapsed">
+<a href="/about-gold" data-drupal-link-system-path="node/9514">About gold</a>
+</li>
+<li class="menu-item">
+<a href="/goldhub" data-drupal-link-system-path="node/5019">Data</a>
+</li>
+<li class="menu-item">
+<a href="/goldhub/research/library" data-drupal-link-system-path="goldhub/research/library">Research</a>
+</li>
+<li class="menu-item menu-item--collapsed">
+<a href="/news-and-events" title="News and events" data-drupal-link-system-path="node/7585">News and events</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</header>
+</div>
+<div class="visual-content-top">
+</div>
+<main role="main" class="container-fluid">
+<a id="main-content" tabindex="-1"></a>
+<div class="row no-gutters">
+<div class="layout-content col-lg-9 with-sidebar-one">
+<div class="container help">
+<div class="region region-help">
+<div class="col-12">
+<div data-drupal-messages-fallback class="hidden"></div><div data-drupal-messages>
+<div role="contentinfo" aria-label="Error message" class="messages messages--error">
+<div role="alert">
+<h2 class="visually-hidden">Error message</h2>
+DU1: You are not logged in. You must be logged in to download this file
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section class="row no-gutters wgc-divider paragraph paragraph--type--screen-css-divider paragraph--view-mode--default wgc-width-12 gutter-md-left gutter-md-right gutter-md-bottom gutter-lg-left gutter-lg-right gutter-lg-bottom manual-gutters">
+<div class="col-12">
+<div class="region region-content">
+<div id="block-wgc-v01-page-title" class="block block-core block-page-title-block">
+<h1>Access denied</h1>
+</div>
+<div id="block-wgc-v01-content" class="block block-system block-system-main-block">
+You are not authorized to access this page.
+</div>
+</div>
+</div>
+<div class="col-12">
+<p>&nbsp;</p>
+<p><a href="/login" class="btn btn-gold">Click here to login</a></p>
+</div>
+</section>
+</div>
+<aside class="layout-sidebar-one sidebar col-lg order-lg-first" role="complementary">
+&nbsp;
+</aside>
+</div></main>
+<footer class="container-fluid" role="contentinfo">
+<div class="region region-footer">
+<nav role="navigation" aria-labelledby="block-footer-menu" id="block-footer" class="block block-menu navigation menu--footer">
+<h2 class="visually-hidden" id="block-footer-menu">Footer</h2>
+<ul class="menu">
+<li class="menu-item">
+<a href="/contact-us" data-drupal-link-system-path="node/12495">Contact us</a>
+</li>
+<li class="menu-item">
+<a href="/sitemap" data-drupal-link-system-path="node/13313">Sitemap</a>
+</li>
+<li class="menu-item">
+<a href="/modern-slavery-statement" title="Modern slavery statement" data-drupal-link-system-path="node/13271">Modern slavery statement</a>
+</li>
+<li class="menu-item">
+<a href="/cookies" title="Cookies" data-drupal-link-system-path="node/13272">Cookies</a>
+</li>
+<li class="menu-item">
+<a href="/privacy" data-drupal-link-system-path="node/9286">Privacy</a>
+</li>
+<li class="menu-item">
+<a href="/terms-and-conditions" data-drupal-link-system-path="node/9266">Terms and conditions</a>
+</li>
+<li class="menu-item">
+<a href="/accessibility" title="Accessibility" data-drupal-link-system-path="node/13273">Accessibility</a>
+</li>
+<li class="menu-item">
+<a href="/world-gold-council-covid-19-statement" data-drupal-link-system-path="node/14784">COVID-19 statement</a>
+</li>
+<li class="menu-item">
+<a href="/world-gold-council-human-rights-statement" data-drupal-link-system-path="node/15023">Human rights statement</a>
+</li>
+</ul>
+</nav>
+</div>
+<div class="copyright">
+<p>&copy;2020 World Gold Council</p>
+<p><a href="http://www.miitbeian.gov.cn/">沪ICP备16026324号</a></p>
+</div>
+</footer>
+</div>
+<script type="text/javascript">
+</script>
+<script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"download\/file\/8369\/Prices.xlsx","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"jquery":{"ui":{"datepicker":{"isRTL":false,"firstDay":0}}},"ajaxPageState":{"libraries":"auth0\/auth0.buttons,classy\/base,classy\/messages,core\/drupal.dialog.ajax,core\/html5shiv,core\/normalize,google_analytics\/google_analytics,system\/base,wgc_algolia\/algolia_block,wgc_charts\/wgc-charts-main,wgc_navigation\/wgc-navigation-main,wgc_seo\/wgc-tracking-main,wgc_social\/wgc-follows-main,wgc_spotprice\/wgc-spotprice-main,wgc_v01\/global-styling,wgc_v01\/wgc-alert,wgc_v01\/wgc-scripts,wgc_webforms\/wgc-webform-main","theme":"wgc_v01","theme_token":null},"ajaxTrustedUrl":[],"google_analytics":{"trackOutbound":true,"trackMailto":true},"wgc_chart":{"FS_Token":"ZExBbmxmamhlZk9UVUQwWktkQ29wQT09"},"user":{"uid":0,"permissionsHash":"12628c73a016a2e93e1f37b4e32917ffeb8a045623a3036100ac88f66900ac7c"}}</script>
+<script src="/sites/default/files/js/js_StwJIsrYaaUfeHIsTh3z3kbEK4ipz_GRpAVMY7Oy_Us.js"></script>
+<script src="//fscdn.gold.org/js/charts/reusable-chart.js"></script>
+<script src="/sites/default/files/js/js_Qi1_fN7J0F-m5W2twkg9Gfyai7m_ucIlNYyV8Dp3APQ.js"></script>
+<div class="modal fade" id="wgcModal" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered  modal-lg" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title"></h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div>
+<div id="overlayDesktop">
+<div class="dialog-container out-of-area">
+<div class="container-fluid out-of-area">
+<div class="dialog-area">
+<div class="dialog-header">
+<div class="d-flex flex-row justify-content-between">
+<h2></h2>
+<button type="button" class="dialog-close" title="Close" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+</div>
+<div class="dialog-body">
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"532ac39be0","applicationID":"197216442","transactionName":"ZwNUZ0FVDRUFVBBeC15Jd1BHXQwIS2sgRRFAB1pvQE0QEgFaOHQLXhJEXF9YBhQ4fxBDFAQeTnBcWhcUC1sIUhYKCVgHAwc=","queueTime":0,"applicationTime":809,"atts":"S0RXEQlPHhs=","errorBeacon":"bam.nr-data.net","agent":""}</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"rayId":"5e88f2974ab8f27b","version":"2020.9.1","si":10}'></script>
+</body>
+</html>
